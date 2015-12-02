@@ -13,10 +13,10 @@ It downloads the most important extensions, and install it on your browser. The 
 Web-Application Penetration Testers, Information Security Learners, and basically anyone interested in web-application security.
 
 ###Compatibility:
-The project currently supports Linux/Unix environments. 
+The project currently supports Linux/Unix environments & Mac OS. 
 
 ###Usage:
-bash ./firefox_security_toolkit.sh
+sh firefox_security_toolkit.sh run
 
 ###Demo Video:
 [Demo Video](https://www.youtube.com/watch?v=0pD-tNrxrzY)
