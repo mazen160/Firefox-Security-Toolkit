@@ -27,6 +27,7 @@ bash ./firefox_security_toolkit.sh
 * Copy as Plain Text
 * Crypto Fox
 * CSRF-Finder
+* Disable WebRTC
 * FireBug
 * Fireforce
 * FlagFox
@@ -45,6 +46,4 @@ bash ./firefox_security_toolkit.sh
 * Downloading Burp Suite Certificate
 * Downloading a large user-agent list for User-Agent Swithcer
 
-###Changelog:-
-* v0.1: Initial release
-* v0.2: Few bugs fixed - Special thanks to Sebastian Neef (@gehaxelt) for his feedback.
+
