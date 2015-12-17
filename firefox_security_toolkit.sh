@@ -4,7 +4,7 @@
 ###Description:
 #This script automatically transform Firefox Browser to a penetration testing suite. The script mainly focuses on downloading the required addons for web-application penetration testing.
 ###Version:
-#v0.3
+#v0.4
 ###Homepage:
 #https://github.com/mazen160/Firefox-Security-Toolkit
 ###Author:
@@ -25,7 +25,7 @@ echo -e " | '_ \| | | (_) | |\/| |/ _\` |_  / | '_ \    / _ \ | '_ \| '_ \` _ \ 
 echo -e " | |_) | |_| |_  | |  | | (_| |/ /| | | | |  / ___ \| | | | | | | | |  __/ (_| | "
 echo -e " |_.__/ \__, (_) |_|  |_|\__,_/___|_|_| |_| /_/   \_\_| |_|_| |_| |_|\___|\__,_| "
 echo -e "        |___/                                                                    "
-echo -e "v0.3"
+echo -e "v0.4"
 echo -e "\t\t\t\t\twww.mazinahmed.net"
 echo -e "\t\t\t\t\ttwitter.com/mazen160"
 echo -e "\t\t\t\t\tae.linkedin.com/pub/mazin-ahmed/86/795/629"
@@ -94,7 +94,7 @@ echo '<!DOCTYPE HTML><html><center><head><h1>Installation is Finished</h1></head
 
 ##Asks about whether the user would like to download Burpsuite Certificate.
 echo -n "[@] Would you like to download Burp Suite Certificate? [y/n]. (Note that Burp Suite should be running in your machine): "; read -r burp_cert_answer
-	if [[ ( $burp_cert_answer == 'y' ) || ( $burp_cert_answer == 'Y' ) || ( $burp_cert_answer == 'yes' ]];then
+	if [[ ( $burp_cert_answer == 'y' ) || ( $burp_cert_answer == 'Y' ) || ( $burp_cert_answer == 'yes' ) ]];then
 
 		echo -n "[@] Enter Burp Suite proxy listener's port (Default: 8080): "; read -r burp_port; if [[ $burp_port == '' ]]; then burp_port='8080' ; fi
 		burp_cert
