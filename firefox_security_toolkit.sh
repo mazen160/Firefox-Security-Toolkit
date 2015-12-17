@@ -94,7 +94,7 @@ echo '<!DOCTYPE HTML><html><center><head><h1>Installation is Finished</h1></head
 
 ##Asks about whether the user would like to download Burpsuite Certificate.
 echo -n "[@] Would you like to download Burp Suite Certificate? [y/n]. (Note that Burp Suite should be running in your machine): "; read -r burp_cert_answer
-	if [[ ( $burp_cert_answer == 'y' ) || ( $burp_cert_answer == 'Y' ) || ( $burp_cert_answer == 'yes' ]];then
+	if [[ ( $burp_cert_answer == 'y' ) || ( $burp_cert_answer == 'Y' ) || ( $burp_cert_answer == 'yes') ]];then
 
 		echo -n "[@] Enter Burp Suite proxy listener's port (Default: 8080): "; read -r burp_port; if [[ $burp_port == '' ]]; then burp_port='8080' ; fi
 		burp_cert
