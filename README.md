@@ -9,7 +9,7 @@ It downloads the most important extensions, and install it on your browser. The 
 ###How does it differs from well-known projects, such as *OWASP Mantra* and *Hcon STF*?
 *OWASP Mantra* and *Hcon STF* are not regularly updated, and needs a lot of work in order to develop and maintain. Meanwhile, *Firefox Security Toolkit* does not need a additional maintaining, although I would be maintaining it for any issues/bugs if needed. The used extensions are downloaded from Mozilla Addons Store with its latest version, to ensure the best testing experience for the penetration tester.
 
-###How can use *Firefox Security Toolkit*?
+###Who can use *Firefox Security Toolkit*?
 Web-Application Penetration Testers, Information Security Learners, and basically anyone interested in web-application security.
 
 ###Compatibility:
