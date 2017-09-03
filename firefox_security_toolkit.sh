@@ -5,7 +5,7 @@
 # This script automatically transform Firefox Browser to a penetration testing suite.
 # The script mainly focuses on downloading the required add-ons for web-application penetration testing.
 ## Version:
-# v0.5
+# v0.6
 ## Homepage:
 # https://github.com/mazen160/Firefox-Security-Toolkit
 ## Author:
@@ -26,7 +26,7 @@ echo " | '_ \| | | (_) | |\/| |/ _\` |_  / | '_ \    / _ \ | '_ \| '_ \` _ \ / _
 echo " | |_) | |_| |_  | |  | | (_| |/ /| | | | |  / ___ \| | | | | | | | |  __/ (_| | "
 echo " |_.__/ \__, (_) |_|  |_|\__,_/___|_|_| |_| /_/   \_\_| |_|_| |_| |_|\___|\__,_| "
 echo "        |___/                                                                    "
-echo "v0.5"
+echo "v0.6"
 echo "www.mazinahmed.net"
 echo "twitter.com/mazen160"
 }
@@ -57,7 +57,9 @@ echo '* Advanced Dork
 * Live HTTP Headers
 * PassiveRecon
 * Regular Expressions Tester
+* RESTED
 * Right-Click XSS
+* Shodan
 * Tamper Data
 * User Agent Switcher
 * Wappalyzer
@@ -177,6 +179,12 @@ wget "https://addons.mozilla.org/firefox/downloads/latest/rext/addon-2077-latest
 
 # Advanced Dork
 wget "https://addons.mozilla.org/firefox/downloads/latest/advanced-dork/addon-2144-latest.xpi" -o /dev/null  -O "$scriptpath/advanced-dork.xpi"
+
+# Shodan
+wget "https://addons.mozilla.org/firefox/downloads/latest/shodan-firefox-addon/type:attachment/addon-557778-latest.xpi" -o /dev/null  -O "$scriptpath/shodan.xpi"
+
+# RESTED
+wget "https://addons.mozilla.org/firefox/downloads/latest/rested/addon-633622-latest.xpi" -o /dev/null  -O "$scriptpath/rested.xpi"
 
 # checks whether to download user-agent list for User-Agent Switcher add-on.
 echo -n "[@] Would you like to download user-agent list for User-Agent Switcher add-on? [y/n]"; read -r useragent_list_answer

@@ -11,6 +11,8 @@
 
 
 ###Change-log:-
+* v0.6:
+        * Added Shodan and RESTED add-ons - Special thanks to Mohammed Diaa @mhmdiaa for the addition.
 * v0.5:
         * Removed multifox, which is deprecated now. - Special thanks to @Nutser for reporting the issue.
         * Added:
