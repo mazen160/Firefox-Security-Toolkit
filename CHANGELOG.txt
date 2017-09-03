@@ -1,19 +1,28 @@
-##################################################################################
-##Firefox Security Toolkit
-###Description:
-#This script automatically transform Firefox Browser to a penetration testing suite. The script mainly focuses on downloading the required addons for web-application penetration testing.
-###Homepage:
-#https://github.com/mazen160/Firefox-Security-Toolkit
-###Author:
-#Mazin Ahmed <mazin AT mazinahmed DOT net>
-###################################################################################
+################################################################################
+## Firefox Security Toolkit
+## Description:
+# This script automatically transform Firefox Browser to a penetration testing suite.
+# The script mainly focuses on downloading the required add-ons for web-application penetration testing.
+## Homepage:
+# https://github.com/mazen160/Firefox-Security-Toolkit
+## Author:
+# Mazin Ahmed <mazin AT mazinahmed DOT net>
+################################################################################
 
 
-###Changelog:-
-* v0.4: Fixed a small bug that occured on v0.3 - Special thanks to Daniel Dizzy (@danieldizzy) for reporting it.
-* v0.3: #Added "Disable WebRTC" addon (Check https://github.com/diafygi/webrtc-ips).
-        #Added an option to choose Burp Suite proxy listener's port - Special thanks to Abdallah Samman (@abdullah-s) for the addition.
+###Change-log:-
+* v0.5:
+        * Removed multifox, which is deprecated now. - Special thanks to @Nutser for reporting the issue.
+        * Added:
+                * Regular Expressions Tester
+                * IP Address and Domain Information
+                * JavaScript Deobfuscator
+                * Greasemonkey
+                * Advanced Dork
+        * General code clean-up.
+* v0.4: Fixed a small bug that occurred on v0.3 - Special thanks to Daniel Dizzy (@danieldizzy) for reporting it.
+* v0.3:
+        * Added "Disable WebRTC" addon (Check https://github.com/diafygi/webrtc-ips).
+        * Added an option to choose Burp Suite proxy listener's port - Special thanks to Abdallah Samman (@abdullah-s) for the addition.
 * v0.2: Few bugs fixed - Special thanks to Sebastian Neef (@gehaxelt) for his feedback.
 * v0.1: Initial release.
-
-
