@@ -181,7 +181,7 @@ wget "https://addons.mozilla.org/firefox/downloads/latest/rext/addon-2077-latest
 wget "https://addons.mozilla.org/firefox/downloads/latest/advanced-dork/addon-2144-latest.xpi" -o /dev/null  -O "$scriptpath/advanced-dork.xpi"
 
 # Shodan
-wget "https://addons.mozilla.org/firefox/downloads/latest/shodan-firefox-addon/type:attachment/addon-557778-latest.xpi" -o /dev/null  -O "$scriptpath/shodan.xpi"
+wget "https://addons.mozilla.org/firefox/downloads/latest/shodan-firefox-addon/latest/addon-557778-latest.xpi" -o /dev/null  -O "$scriptpath/shodan.xpi"
 
 # RESTED
 wget "https://addons.mozilla.org/firefox/downloads/latest/rested/addon-633622-latest.xpi" -o /dev/null  -O "$scriptpath/rested.xpi"
