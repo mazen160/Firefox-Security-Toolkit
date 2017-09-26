@@ -5,7 +5,7 @@
 # This script automatically transform Firefox Browser to a penetration testing suite.
 # The script mainly focuses on downloading the required add-ons for web-application penetration testing.
 ## Version:
-# v0.6
+# v0.6.1
 ## Homepage:
 # https://github.com/mazen160/Firefox-Security-Toolkit
 ## Author:
@@ -26,7 +26,7 @@ echo " | '_ \| | | (_) | |\/| |/ _\` |_  / | '_ \    / _ \ | '_ \| '_ \` _ \ / _
 echo " | |_) | |_| |_  | |  | | (_| |/ /| | | | |  / ___ \| | | | | | | | |  __/ (_| | "
 echo " |_.__/ \__, (_) |_|  |_|\__,_/___|_|_| |_| /_/   \_\_| |_|_| |_| |_|\___|\__,_| "
 echo "        |___/                                                                    "
-echo "v0.6"
+echo "v0.6.1"
 echo "www.mazinahmed.net"
 echo "twitter.com/mazen160"
 }
@@ -61,6 +61,7 @@ echo '* Advanced Dork
 * Right-Click XSS
 * Shodan
 * Tamper Data
+* ThreatPinch Lookup
 * User Agent Switcher
 * Wappalyzer
 * Web Developer
@@ -185,6 +186,9 @@ wget "https://addons.mozilla.org/firefox/downloads/latest/shodan-firefox-addon/l
 
 # RESTED
 wget "https://addons.mozilla.org/firefox/downloads/latest/rested/addon-633622-latest.xpi" -o /dev/null  -O "$scriptpath/rested.xpi"
+
+# ThreatPinch Lookup
+wget "https://addons.cdn.mozilla.net/user-media/addons/856290/threatpinch_lookup_for_firefox-2.0.17-an+fx.xpi" -o /dev/null  -O "$scriptpath/threatpinch-lookup.xpi"
 
 # checks whether to download user-agent list for User-Agent Switcher add-on.
 echo -n "[@] Would you like to download user-agent list for User-Agent Switcher add-on? [y/n]"; read -r useragent_list_answer

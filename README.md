@@ -44,6 +44,7 @@ bash ./firefox_security_toolkit.sh
 * Right-Click XSS (https://addons.mozilla.org/en-us/firefox/addon/rightclickxss/)
 * Shodan (https://addons.mozilla.org/en-US/firefox/addon/shodan-firefox-addon/)
 * Tamper Data (https://addons.mozilla.org/en-US/firefox/addon/tamper-data/)
+* ThreatPinch Lookup (https://addons.mozilla.org/en-US/firefox/addon/threatpinch-lookup-for-firefox/)
 * User Agent Switcher (https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/)
 * Wappalyzer (https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)
 * Web Developer (https://addons.mozilla.org/en-us/firefox/addon/web-developer/)

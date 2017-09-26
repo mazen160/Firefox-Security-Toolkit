@@ -11,6 +11,8 @@
 
 
 ###Change-log:-
+* v0.6.1:
+        * Added ThreatPinch Lookup add-on - Special thanks to @cloudtracer and ThreatPinch for the addition.
 * v0.6:
         * Added Shodan and RESTED add-ons - Special thanks to Mohammed Diaa @mhmdiaa for the addition.
 * v0.5:
