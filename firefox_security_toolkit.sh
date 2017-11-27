@@ -36,7 +36,7 @@ logo
 welcome() {
 echo -e "\n\n"
 echo -e "Usage:\n\t"
-echo -e "bash $0 run (macos|linux)"
+echo -e "bash $0 run"
 echo -e "\n"
 echo -e '[%%] Available Add-ons:'
 echo '* Advanced Dork
@@ -73,22 +73,22 @@ echo -e "\n\n"
 echo "[$] Legal Disclaimer: Usage of Firefox Security Toolkit for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program"
 }
 
-if [[ $1 != 'run' || "$#" -ne 2 ]];then
+if [[ $1 != 'run' ]];then
   welcome
   exit 0
 else
   echo -en "\n\n[#] Click [Enter] to start. "; read -r
 fi
 
-if [[ $2 == 'macos' ]];then
-  firefoxpath='/Applications/Firefox.app/Contents/MacOS/firefox-bin'
-elif [[ $2 == 'linux' ]];then
+if [[ "$(uname)" == "Darwin" ]];then
+  firefoxpath="/Applications/Firefox.app/Contents/MacOS/firefox-bin"
+else
   firefoxpath='/usr/bin/firefox'
 fi
 
 
 # checking whether Firefox is installed.
-if ! [ -f $firefoxpath ]; then
+if ! [ -f "$firefoxpath" ]; then
 echo -e "[*] Firefox does not seem to be installed.\n[*]Quitting..."
 exit 1
 fi
@@ -216,7 +216,7 @@ echo -e "[*] Running Firefox to install the add-ons.\n"
 # stopping Firefox if it's running.
 killall firefox &> /dev/null
 #Running it again.
-$firefoxpath "$scriptpath/"*.xpi "$scriptpath/.installation_finished.html" &> /dev/null
+"$firefoxpath" "$scriptpath/"*.xpi "$scriptpath/.installation_finished.html" &> /dev/null
 ####
 
 # in case you need to delete the tmp directory, uncomment the following line.
