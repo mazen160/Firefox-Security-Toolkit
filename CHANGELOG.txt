@@ -10,7 +10,10 @@
 ################################################################################
 
 
-###Change-log:-
+## Changelog:-
+* v0.7:
+         Major update to all addons. Removed all unsupported addons as of Firefox v74. Replaced unsupported addons with functional alternatives. Added new addons.
+         Thanks to @DenverDaveH for reporting the issues.
 * v0.6.1:
         * Added ThreatPinch Lookup add-on - Special thanks to @cloudtracer and ThreatPinch for the addition.
 * v0.6:

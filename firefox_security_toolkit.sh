@@ -5,7 +5,7 @@
 # This script automatically transform Firefox Browser to a penetration testing suite.
 # The script mainly focuses on downloading the required add-ons for web-application penetration testing.
 ## Version:
-# v0.6.1
+# v0.7
 ## Homepage:
 # https://github.com/mazen160/Firefox-Security-Toolkit
 ## Author:
@@ -26,7 +26,7 @@ echo " | '_ \| | | (_) | |\/| |/ _\` |_  / | '_ \    / _ \ | '_ \| '_ \` _ \ / _
 echo " | |_) | |_| |_  | |  | | (_| |/ /| | | | |  / ___ \| | | | | | | | |  __/ (_| | "
 echo " |_.__/ \__, (_) |_|  |_|\__,_/___|_|_| |_| /_/   \_\_| |_|_| |_| |_|\___|\__,_| "
 echo "        |___/                                                                    "
-echo "v0.6.1"
+echo "v0.7"
 echo "www.mazinahmed.net"
 echo "twitter.com/mazen160"
 }
@@ -39,33 +39,28 @@ echo -e "Usage:\n\t"
 echo -e "bash $0 run"
 echo -e "\n"
 echo -e '[%%] Available Add-ons:'
-echo '* Advanced Dork
-* Cookie Export/Import
-* Cookie Manager+
-* Copy as Plain Text
-* Crypto Fox
-* CSRF-Finder
+echo '* Copy PlainText
+* CSRF spotter
 * Disable WebRTC
-* FireBug
-* Fireforce
-* FlagFox
-* Foxy Proxy
-* Greasemonkey
-* HackBar
-* IP Address and Domain Information
-* JavaScript Deobfuscator
-* Live HTTP Headers
-* PassiveRecon
-* Regular Expressions Tester
-* RESTED
-* Right-Click XSS
-* Shodan
-* Tamper Data
-* ThreatPinch Lookup
-* User Agent Switcher
+* Easy XSS
+* Flagfox
+* FoxyProxy Standard
+* Google Dork Builder
+* HackBar Quantum
+* HackBar V2
+* HTTP Header Live
+* iMacros for Firefox
+* JSONView
+* KNOXSS Community Edition
+* Resurrect Pages
+* Shodan.io
+* show-my-ip
+* User-Agent Switcher and Manager
 * Wappalyzer
 * Web Developer
+* XML Viewer Plus
 '
+
 echo '[%%] Additions & Features:'
 echo '* Downloading Burp Suite certificate'
 echo '* Downloading a large user-agent list for User-Agent Switcher'
@@ -80,18 +75,24 @@ else
   echo -en "\n\n[#] Click [Enter] to start. "; read -r
 fi
 
-if [[ "$(uname)" == "Darwin" ]];then
-  firefoxpath="/Applications/Firefox.app/Contents/MacOS/firefox-bin"
-else
-  firefoxpath='/usr/bin/firefox'
+if [[ -z $FIREFOXPATH ]]; then
+  if [[ ! -z $(which firefox) ]]; then
+    FIREFOXPATH=$(which firefox)
+  elif [[ "$(uname)" == "Darwin" ]];then
+    FIREFOXPATH="/Applications/Firefox.app/Contents/MacOS/firefox-bin"
+  else
+    FIREFOXPATH='/usr/bin/firefox'
+  fi
 fi
 
 
 # checking whether Firefox is installed.
-if ! [ -f "$firefoxpath" ]; then
-echo -e "[*] Firefox does not seem to be installed.\n[*]Quitting..."
-exit 1
+if [[ ! -f "$FIREFOXPATH" ]]; then
+  echo -e "[*] Firefox does not seem to be installed.\n[*]Quitting..."
+  exit 1
 fi
+
+echo "[*] Firefox path: $FIREFOXPATH"
 
 # creating a tmp directory.
 scriptpath=$(mktemp -d)
@@ -119,89 +120,72 @@ echo -n "[@] Would you like to download Burp Suite certificate? [y/n]. (Note: Bu
 # downloading packages.
 echo -e "[*] Downloading Add-ons."
 
-# Copy as Plain Text
-wget "https://addons.mozilla.org/firefox/downloads/latest/copy-as-plain-text/addon-344925-latest.xpi" -o /dev/null -O "$scriptpath/copy_as_plain_text.xpi"
+# Copy PlainText
+wget "https://addons.mozilla.org/firefox/downloads/file/3420581/copy_plaintext-1.10-fx.xpi" -o /dev/null -O "$scriptpath/copy_plaintext-1.10-fx.xpi"
 
-# Web Developer
-wget "https://addons.mozilla.org/firefox/downloads/latest/web-developer/addon-60-latest.xpi" -o /dev/null -O "$scriptpath/web_developer.xpi"
+# CSRF spotter
+wget "https://addons.mozilla.org/firefox/downloads/file/2209785/csrf_spotter-1.0-fx.xpi" -o /dev/null -O "$scriptpath/csrf_spotter-1.0-fx.xpi"
 
-# Tamper Data
-wget "https://addons.mozilla.org/firefox/downloads/latest/tamper-data/addon-966-latest.xpi" -o /dev/null -O "$scriptpath/tamper_data.xpi"
+# Easy XSS
+wget "https://addons.mozilla.org/firefox/downloads/file/1158849/easy_xss-1.0-fx.xpi" -o /dev/null -O "$scriptpath/easy_xss-1.0-fx.xpi"
 
-# User-Agent Switcher
-wget "https://addons.mozilla.org/firefox/downloads/latest/user-agent-switcher/addon-59-latest.xpi" -o /dev/null -O "$scriptpath/user_agent_switcher.xpi"
+# Flagfox
+wget "https://addons.mozilla.org/firefox/downloads/file/3538268/flagfox-6.1.25-fx.xpi" -o /dev/null -O "$scriptpath/flagfox-6.1.25-fx.xpi"
 
-# Right-Click XSS
-wget "https://addons.mozilla.org/firefox/downloads/file/215802/rightclickxss-0.2.1-fx.xpi" -o /dev/null -O "$scriptpath/right_click_xss.xpi"
+# FoxyProxy Standard
+wget "https://addons.mozilla.org/firefox/downloads/file/3476518/foxyproxy_standard-7.4.3-an+fx.xpi" -o /dev/null -O "$scriptpath/foxyproxy_standard-7.4.3-an+fx.xpi"
 
-# Foxy Proxy
-wget "https://addons.mozilla.org/firefox/downloads/file/319162/foxyproxy_standard-4.5.5-sm+tb+fx.xpi" -o /dev/null -O "$scriptpath/foxy_proxy.xpi"
+# Google Dork Builder
+wget "https://addons.mozilla.org/firefox/downloads/file/3453468/google_dork_builder-0.6-fx.xpi" -o /dev/null -O "$scriptpath/google_dork_builder-0.6-fx.xpi"
 
-# HackBar
-wget "https://addons.mozilla.org/firefox/downloads/latest/3899/addon-3899-latest.xpi" -o /dev/null -O "$scriptpath/hackbar.xpi"
+# HackBar V2
+wget "https://addons.mozilla.org/firefox/downloads/file/3450934/hackbar_v2-2.4.1-fx.xpi" -o /dev/null -O "$scriptpath/hackbar_v2-2.4.1-fx.xpi"
 
-# Wappalyzer
-wget "https://addons.mozilla.org/firefox/downloads/latest/wappalyzer/addon-10229-latest.xpi" -o /dev/null -O "$scriptpath/wappalyzer.xpi"
-
-# PassiveRecon
-wget "https://addons.mozilla.org/firefox/downloads/latest/6196/addon-6196-latest.xpi" -o /dev/null -O "$scriptpath/passiverecon.xpi"
-
-# Cookie Manager+
-wget "https://addons.mozilla.org/firefox/downloads/latest/92079/addon-92079-latest.xpi" -o /dev/null -O "$scriptpath/cookiemanager+.xpi"
-
-# Cookie Export/Import
-wget "https://addons.mozilla.org/firefox/downloads/latest/344927/addon-344927-latest.xpi" -o /dev/null -O "$scriptpath/cookie_export_import.xpi"
-
-# FlagFox
-wget "https://addons.mozilla.org/firefox/downloads/latest/5791/addon-5791-latest.xpi" -o /dev/null -O "$scriptpath/flagfox.xpi"
-
-# Fireforce
-wget "https://addons.mozilla.org/firefox/downloads/file/204186/fireforce-2.2-fx.xpi" -o /dev/null -O "$scriptpath/fireforce.xpi"
-
-# CSRF-Finder
-wget "https://addons.mozilla.org/firefox/downloads/file/224182/csrf_finder-1.2-fx.xpi" -o /dev/null -O "$scriptpath/csrf_finder.xpi"
-
-# FireBug
-wget "https://addons.mozilla.org/firefox/downloads/latest/1843/addon-1843-latest.xpi" -o /dev/null -O "$scriptpath/firebug.xpi"
-
-# Live HTTP Headers
-wget "https://addons.mozilla.org/firefox/downloads/file/345004/live_http_headers_fixed_by_danyialshahid-0.17.1-signed-sm+fx.xpi" -o /dev/null -O "$scriptpath/live_http_headers.xpi"
-
-# Crypto Fox
-wget "https://addons.mozilla.org/firefox/downloads/file/140447/cryptofox-2.2-fx.xpi" -o /dev/null  -O "$scriptpath/crypto_fox.xpi"
+# HackBar Quantum
+wget "https://addons.mozilla.org/firefox/downloads/file/934299/hackbar_quantum-1.6-an+fx.xpi" -o /dev/null -O "$scriptpath/hackbar_quantum-1.6-an+fx.xpi"
 
 # Disable WebRTC
-wget "https://addons.mozilla.org/firefox/downloads/latest/497366/addon-497366-latest.xpi" -o /dev/null  -O "$scriptpath/disable_webrtc.xpi"
+wget "https://addons.mozilla.org/firefox/downloads/file/3048824/disable_webrtc-1.0.21-an+fx.xpi" -o /dev/null -O "$scriptpath/disable_webrtc-1.0.21-an+fx.xpi"
 
-# JavaScript Deobfuscator
-wget "https://addons.mozilla.org/firefox/downloads/latest/javascript-deobfuscator/addon-10345-latest.xpi" -o /dev/null  -O "$scriptpath/javascript_deobfuscator.xpi"
+# HTTP Header Live
+wget "https://addons.mozilla.org/firefox/downloads/file/3384326/http_header_live-0.6.5.2-fx.xpi" -o /dev/null -O "$scriptpath/http_header_live-0.6.5.2-fx.xpi"
 
-# IP Address and Domain Information
-wget "https://addons.mozilla.org/firefox/downloads/latest/ip-address-and-domain-info/addon-394670-latest.xpi" -o /dev/null  -O "$scriptpath/ip-address-and-domain-info.xpi"
+# iMacros for Firefox
+wget "https://addons.mozilla.org/firefox/downloads/file/1010019/imacros_for_firefox-10.0.2.1450-an+fx-linux.xpi" -o /dev/null -O "$scriptpath/imacros_for_firefox-10.0.2.1450-an+fx-linux.xpi"
 
-# Greasemonkey
-wget "https://addons.mozilla.org/firefox/downloads/latest/greasemonkey/addon-748-latest.xpi" -o /dev/null  -O "$scriptpath/greasemonkey.xpi"
+# JSONView
+wget "https://addons.mozilla.org/firefox/downloads/file/1713269/jsonview-2.1.0-fx.xpi" -o /dev/null -O "$scriptpath/jsonview-2.1.0-fx.xpi"
 
-# Regular Expressions Tester
-wget "https://addons.mozilla.org/firefox/downloads/latest/rext/addon-2077-latest.xpi" -o /dev/null  -O "$scriptpath/regular-expressions-tester.xpi"
+# KNOXSS Community Edition
+wget "https://addons.mozilla.org/firefox/downloads/file/3378216/knoxss_community_edition-0.2.0-fx.xpi" -o /dev/null -O "$scriptpath/knoxss_community_edition-0.2.0-fx.xpi"
 
-# Advanced Dork
-wget "https://addons.mozilla.org/firefox/downloads/latest/advanced-dork/addon-2144-latest.xpi" -o /dev/null  -O "$scriptpath/advanced-dork.xpi"
+# Resurrect Pages
+wget "https://addons.mozilla.org/firefox/downloads/file/926958/resurrect_pages-7-an+fx.xpi" -o /dev/null -O "$scriptpath/resurrect_pages-7-an+fx.xpi"
 
-# Shodan
-wget "https://addons.mozilla.org/firefox/downloads/latest/shodan-firefox-addon/latest/addon-557778-latest.xpi" -o /dev/null  -O "$scriptpath/shodan.xpi"
+# Shodan.io
+wget "https://addons.mozilla.org/firefox/downloads/file/788781/shodanio-0.3.2-an+fx.xpi" -o /dev/null -O "$scriptpath/shodanio-0.3.2-an+fx.xpi"
 
-# RESTED
-wget "https://addons.mozilla.org/firefox/downloads/latest/rested/addon-633622-latest.xpi" -o /dev/null  -O "$scriptpath/rested.xpi"
+# show-my-ip
+wget "https://addons.mozilla.org/firefox/downloads/file/3458407/show_my_ip-1.5-fx.xpi" -o /dev/null -O "$scriptpath/show_my_ip-1.5-fx.xpi"
 
-# ThreatPinch Lookup
-wget "https://addons.cdn.mozilla.net/user-media/addons/856290/threatpinch_lookup_for_firefox-2.0.17-an+fx.xpi" -o /dev/null  -O "$scriptpath/threatpinch-lookup.xpi"
+# User-Agent Switcher and Manager
+wget "https://addons.mozilla.org/firefox/downloads/file/3527040/user_agent_switcher_and_manager-0.3.5-an+fx.xpi" -o /dev/null -O "$scriptpath/user_agent_switcher_and_manager-0.3.5-an+fx.xpi"
+
+# Wappalyzer
+wget "https://addons.mozilla.org/firefox/downloads/file/3539068/wappalyzer-5.9.30-fx.xpi" -o /dev/null -O "$scriptpath/wappalyzer-5.9.30-fx.xpi"
+
+# Web Developer
+wget "https://addons.mozilla.org/firefox/downloads/file/3484096/web_developer-2.0.5-an+fx.xpi" -o /dev/null -O "$scriptpath/web_developer-2.0.5-an+fx.xpi"
+
+# XML Viewer Plus
+wget "https://addons.mozilla.org/firefox/downloads/file/3032172/xml_viewer_plus-1.2.6-an+fx.xpi" -o /dev/null -O "$scriptpath/xml_viewer_plus-1.2.6-an+fx.xpi"
+
 
 # checks whether to download user-agent list for User-Agent Switcher add-on.
-echo -n "[@] Would you like to download user-agent list for User-Agent Switcher add-on? [y/n]"; read -r useragent_list_answer
+echo -n "[@] Would you like to download user-agent list for User-Agent Switcher add-on? [y/n]: "; read -r useragent_list_answer
   useragent_list_answer=$(echo -n "$useragent_list_answer" | tr '[:upper:]' '[:lower:]')
   if [[ ( $useragent_list_answer == 'y' ) || ( $useragent_list_answer == 'yes' ) ]]; then
-    wget 'http://techpatterns.com/downloads/firefox/useragentswitcher.xml' -o /dev/null -O "$scriptpath/useragentswitcher.xml"
+    wget 'https://techpatterns.com/downloads/firefox/useragentswitcher.xml' -o /dev/null -O "$scriptpath/useragentswitcher.xml"
     echo -e "[*]Additional user-agents has been downloaded for \"User-Agent Switcher\" add-on, you can import it manually. It can be found at: [$scriptpath/useragentswitcher.xml]."
   fi
 
@@ -209,14 +193,20 @@ echo -n "[@] Would you like to download user-agent list for User-Agent Switcher 
 echo -e "[*] Downloading add-ons completed.\n";
 echo -en "[@@] Click [Enter] to run Firefox to perform the task. (Note: Firefox will be restarted) "; read -r
 echo -e "[*] Running Firefox to install the add-ons.\n"
-
+echo -e "Click confirm on the prompt, and close Firefox, until all addons are installed"
 # installing the add-ons.
 # the process needs to be semi-manually due to Mozilla Firefox security policies.
 
 # stopping Firefox if it's running.
 killall firefox &> /dev/null
-#Running it again.
-"$firefoxpath" "$scriptpath/"*.xpi "$scriptpath/.installation_finished.html" &> /dev/null
+# installing
+# "$FIREFOXPATH" "$scriptpath/"*.xpi "$scriptpath/.installation_finished.html" &> /dev/null
+for extension in $(find $scriptpath -type f -name "*.xpi"); do
+  echo "- $extension"
+  "$FIREFOXPATH" --new-tab "$extension"
+done
+"FIREFOXPATH" "$scriptpath/.installation_finished.html"
+
 ####
 
 # in case you need to delete the tmp directory, uncomment the following line.
