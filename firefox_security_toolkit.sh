@@ -48,6 +48,7 @@ echo '* Copy PlainText
 * Google Dork Builder
 * HackBar Quantum
 * HackBar V2
+* HackTools
 * HTTP Header Live
 * iMacros for Firefox
 * JSONView
@@ -179,6 +180,9 @@ wget "https://addons.mozilla.org/firefox/downloads/file/3484096/web_developer-2.
 
 # XML Viewer Plus
 wget "https://addons.mozilla.org/firefox/downloads/file/3032172/xml_viewer_plus-1.2.6-an+fx.xpi" -o /dev/null -O "$scriptpath/xml_viewer_plus-1.2.6-an+fx.xpi"
+
+# HackTools
+wget "https://addons.mozilla.org/firefox/downloads/file/3707062/hacktools-0.3.2-fx.xpi" -o /dev/null -O "$scriptpath/hacktools-0.3.2-fx.xpi"
 
 
 # checks whether to download user-agent list for User-Agent Switcher add-on.
