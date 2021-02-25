@@ -26,6 +26,7 @@ bash ./firefox_security_toolkit.sh
 * User-Agent Switcher and Manager (https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher/)
 * HackBar Quantum (https://addons.mozilla.org/en-US/firefox/addon/hackbar-quantum/)
 * HackBar V2 (https://addons.mozilla.org/en-US/firefox/addon/hackbar-free/)
+* HackTools (https://addons.mozilla.org/en-US/firefox/addon/hacktools/)
 * HTTP Header Live (https://addons.mozilla.org/en-US/firefox/addon/http-header-live/)
 * show-my-ip (https://addons.mozilla.org/en-US/firefox/addon/show-ip/)
 * FoxyProxy Standard (https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
