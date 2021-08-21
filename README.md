@@ -42,7 +42,7 @@ bash ./firefox_security_toolkit.sh
 * CSRF spotter (https://addons.mozilla.org/en-US/firefox/addon/csrf-spotter/)
 * KNOXSS Community Edition (https://addons.mozilla.org/en-US/firefox/addon/knoxss-community-edition/)
 * XML Viewer Plus (https://addons.mozilla.org/en-US/firefox/addon/xml-viewer/)
-* Shodan.io (https://addons.mozilla.org/en-US/firefox/addon/shodan_io/)
+* Shodan (https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
 
 # Additions & Features #
 * Downloading Burp Suite certificate.

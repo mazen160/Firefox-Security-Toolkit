@@ -163,8 +163,8 @@ wget "https://addons.mozilla.org/firefox/downloads/file/3378216/knoxss_community
 # Resurrect Pages
 wget "https://addons.mozilla.org/firefox/downloads/file/926958/resurrect_pages-7-an+fx.xpi" -o /dev/null -O "$scriptpath/resurrect_pages-7-an+fx.xpi"
 
-# Shodan.io
-wget "https://addons.mozilla.org/firefox/downloads/file/788781/shodanio-0.3.2-an+fx.xpi" -o /dev/null -O "$scriptpath/shodanio-0.3.2-an+fx.xpi"
+# Shodan
+wget "https://addons.mozilla.org/firefox/downloads/file/3788939/shodan-1.1.0-an+fx.xpi" -o /dev/null -O "$scriptpath/shodan-1.1.0-an+fx.xpi"
 
 # show-my-ip
 wget "https://addons.mozilla.org/firefox/downloads/file/3458407/show_my_ip-1.5-fx.xpi" -o /dev/null -O "$scriptpath/show_my_ip-1.5-fx.xpi"
