@@ -35,10 +35,6 @@ bash ./firefox_security_toolkit.sh
 * Flagfox (https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
 * Resurrect Pages (https://addons.mozilla.org/en-US/firefox/addon/resurrect-pages/)
 * JSONView (https://addons.mozilla.org/en-US/firefox/addon/jsonview/)
-* Flagfox (https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
-* FoxyProxy Standard (https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
-* Google Dork Builder (https://addons.mozilla.org/en-US/firefox/addon/google-dork-builder/)
-* Disable WebRTC (https://addons.mozilla.org/en-US/firefox/addon/happy-bonobo-disable-webrtc/)
 * Google Dork Builder (https://addons.mozilla.org/en-US/firefox/addon/google-dork-builder/)
 * Disable WebRTC (https://addons.mozilla.org/en-US/firefox/addon/happy-bonobo-disable-webrtc/)
 * Copy PlainText (https://addons.mozilla.org/en-US/firefox/addon/copy-plaintext/)
@@ -46,7 +42,7 @@ bash ./firefox_security_toolkit.sh
 * CSRF spotter (https://addons.mozilla.org/en-US/firefox/addon/csrf-spotter/)
 * KNOXSS Community Edition (https://addons.mozilla.org/en-US/firefox/addon/knoxss-community-edition/)
 * XML Viewer Plus (https://addons.mozilla.org/en-US/firefox/addon/xml-viewer/)
-* Shodan.io (https://addons.mozilla.org/en-US/firefox/addon/shodan_io/)
+* Shodan (https://addons.mozilla.org/en-US/firefox/addon/shodan-addon/)
 
 # Additions & Features #
 * Downloading Burp Suite certificate.
