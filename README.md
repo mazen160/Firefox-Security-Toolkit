@@ -43,6 +43,9 @@ bash ./firefox_security_toolkit.sh
 * KNOXSS Community Edition (https://addons.mozilla.org/en-US/firefox/addon/knoxss-community-edition/)
 * XML Viewer Plus (https://addons.mozilla.org/en-US/firefox/addon/xml-viewer/)
 * Shodan.io (https://addons.mozilla.org/en-US/firefox/addon/shodan_io/)
+* Penetration Testing Kit (https://addons.mozilla.org/en-US/firefox/addon/penetration-testing-kit/)
+* retire.js (https://addons.mozilla.org/en-US/firefox/addon/retire-js/)
+* Mitaka (https://addons.mozilla.org/en-US/firefox/addon/mitaka/)
 
 # Additions & Features #
 * Downloading Burp Suite certificate.
