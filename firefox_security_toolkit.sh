@@ -184,6 +184,16 @@ wget "https://addons.mozilla.org/firefox/downloads/file/3032172/xml_viewer_plus-
 # HackTools
 wget "https://addons.mozilla.org/firefox/downloads/file/3707062/hacktools-0.3.2-fx.xpi" -o /dev/null -O "$scriptpath/hacktools-0.3.2-fx.xpi"
 
+# Penetration Testing Kit 
+wget "https://addons.mozilla.org/firefox/downloads/file/3823220/penetration_testing_kit-7.3.0-fx.xpi" -o /dev/null -O "$scriptpath/penetration_testing_kit-7.3.0-fx.xpi"
+
+# retire.js
+wget "https://addons.mozilla.org/firefox/downloads/file/3786101/retirejs-1.5.4-fx.xpi" -o /dev/null -O "$scriptpath/retirejs-1.5.4-fx.xpi"
+
+# Mitaka
+wget "https://addons.mozilla.org/firefox/downloads/file/3819334/mitaka-0.87.0-fx.xpi" -o /dev/null -O "$scriptpath/mitaka-0.87.0-fx.xpi"
+
+
 
 # checks whether to download user-agent list for User-Agent Switcher add-on.
 echo -n "[@] Would you like to download user-agent list for User-Agent Switcher add-on? [y/n]: "; read -r useragent_list_answer
