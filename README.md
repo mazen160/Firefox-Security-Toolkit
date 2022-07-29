@@ -15,8 +15,23 @@ Web-Application Penetration Testers, Information Security Learners, and basicall
 # Compatibility #
 The project supports Linux/Unix environments.
 
+# Installing #
+
+```wget https://raw.githubusercontent.com/mazen160/Firefox-Security-Toolkit/master/firefox_security_toolkit.sh```
+
+```chmod 700 firefox_security_toolkit.sh```
+
+```bash firefox_security_toolkit.sh```
+### One Liner ###
+
+```
+wget https://raw.githubusercontent.com/mazen160/Firefox-Security-Toolkit/master/firefox_security_toolkit.sh && chmod 700 firefox_security_toolkit.sh && bash firefox_security_toolkit.sh
+```
+
+
 # Usage #
-bash ./firefox_security_toolkit.sh
+
+```bash ./firefox_security_toolkit.sh```
 
 # Demo Video #
 [Demo Video](https://www.youtube.com/watch?v=0pD-tNrxrzY)
@@ -37,8 +52,6 @@ bash ./firefox_security_toolkit.sh
 * JSONView (https://addons.mozilla.org/en-US/firefox/addon/jsonview/)
 * Flagfox (https://addons.mozilla.org/en-US/firefox/addon/flagfox/)
 * FoxyProxy Standard (https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
-* Google Dork Builder (https://addons.mozilla.org/en-US/firefox/addon/google-dork-builder/)
-* Disable WebRTC (https://addons.mozilla.org/en-US/firefox/addon/happy-bonobo-disable-webrtc/)
 * Google Dork Builder (https://addons.mozilla.org/en-US/firefox/addon/google-dork-builder/)
 * Disable WebRTC (https://addons.mozilla.org/en-US/firefox/addon/happy-bonobo-disable-webrtc/)
 * Copy PlainText (https://addons.mozilla.org/en-US/firefox/addon/copy-plaintext/)
