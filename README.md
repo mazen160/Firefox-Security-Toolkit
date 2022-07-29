@@ -17,10 +17,17 @@ The project supports Linux/Unix environments.
 
 # Installing #
 
+```wget https://raw.githubusercontent.com/mazen160/Firefox-Security-Toolkit/master/firefox_security_toolkit.sh```
+
+```chmod 700 firefox_security_toolkit.sh```
+
+```bash firefox_security_toolkit.sh```
+### One Liner ###
+
 ```
-wget https://raw.githubusercontent.com/mazen160/Firefox-Security-Toolkit/master/firefox_security_toolkit.sh
-chmod 700 firefox_security_toolkit.sh
+wget https://raw.githubusercontent.com/mazen160/Firefox-Security-Toolkit/master/firefox_security_toolkit.sh && chmod 700 firefox_security_toolkit.sh && bash firefox_security_toolkit.sh
 ```
+
 
 # Usage #
 
