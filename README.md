@@ -39,8 +39,6 @@ bash ./firefox_security_toolkit.sh
 * FoxyProxy Standard (https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
 * Google Dork Builder (https://addons.mozilla.org/en-US/firefox/addon/google-dork-builder/)
 * Disable WebRTC (https://addons.mozilla.org/en-US/firefox/addon/happy-bonobo-disable-webrtc/)
-* Google Dork Builder (https://addons.mozilla.org/en-US/firefox/addon/google-dork-builder/)
-* Disable WebRTC (https://addons.mozilla.org/en-US/firefox/addon/happy-bonobo-disable-webrtc/)
 * Copy PlainText (https://addons.mozilla.org/en-US/firefox/addon/copy-plaintext/)
 * Easy XSS (https://addons.mozilla.org/en-US/firefox/addon/easy-xss/)
 * CSRF spotter (https://addons.mozilla.org/en-US/firefox/addon/csrf-spotter/)
